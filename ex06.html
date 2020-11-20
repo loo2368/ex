@@ -1,21 +1,197 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- 필수메타 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- 선택메타 -->
-    <meta name="keywords" content="코로나, COVID, 전염병, 사회적 거리두기">
-    <meta name="discription" content="코로나 바이러스에 대한 정보를 제공합니다.">
-    <meta name="author" content="홍길동">
-    <title>연습6</title>
-    <link rel="stylesheet" href="./css/font-awesome.css">
+    <title>About Me</title>
+    <style>
+        body{
+            background-color: #333333;
+        }
+        #wrap{
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #art_left{
+            width: 240px;
+            background-color: #ddd;
+            height: 980px;
+            float: left;
+            padding: 20px 40px 0 40px;
+        }
+        #art_right{
+            width: 560px;
+            background-color: #fff;
+            height: 960px;
+            float: right;
+            padding: 40px 60px 0 20px;
+        }
+        img{
+            width: 240px;
+            margin-bottom: 30px;
+        }
+        div{
+            padding-left: 40px;
+        }
+        h1{
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            }
+        h1>span{
+            font-size: 32px;
+        }
+        #art_left>#first_p{
+            color: #666;
+            margin-bottom: 90px;
+        }
+        #art_left>p{
+            margin-bottom: 30px;
+        }
+        hr{
+            margin: 30px 0 20px 0;
+        }
+        li{
+            margin-bottom: 20px;
+        }
+        ul>li>ul{
+            margin-top: 16px;
+        }
+        ul>li>ul>li{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        #who_am_i{
+            padding-left:20px;
+            line-height: 24px;
+        }
+        #who_am_i>strong{font-weight: 500;
+        background-color: yellow;
+        }
+        table{
+            width: 500px;
+            margin: 0 auto;
+            border-top: 1px solid #ddd;
+            border-collapse: collapse;
+
+        }
+        td{
+            padding: 5px;
+            border-bottom: 1px solid #dddddd;
+            font-size: 14px;
+        }
+        #first_tr{
+            font-weight: 900;
+        }
+        #second_table{
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        #line_01{
+            background-color: #ddd;
+            }
+        #line_01>td{
+            font-weight: 900;
+        }
+        a{
+            color: orangered;
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 <body>
-    하트<br>
-    ♥<br>
-    &hearts;<br>
-    <i class="fa fa-heart" aria-hidden="true"></i>
+    <section id="wrap">
+        <article id="art_left">
+            <img src="./images/hotdog01.jpg" alt="강아지">
+            <h1><span>H</span>YEJEONG <span>L</span>EE</h1>
+            <p id="first_p">오늘은 남은 인생을 시작하는 첫째날</p>
+            <p>Seoul, Korea</p>
+            <p>loo2368@naver.com</p>
+            <h2>SNS</h2>
+        </article>
+        <article id="art_right">
+            <div>
+                <h2>Who am I?</h2>
+                <p id="who_am_i"><strong>웹디자인과 웹퍼블리싱에 관심이 많습니다.</strong> 현재 신림에서 열심히 공부중입니다.</p>
+            </div>
+            <hr>
+            <div>
+                <h2>Esperience</h2>
+                <ul>
+                    <li>
+                        웹디자인
+                        <ul>
+                            <li>
+                                <a href="./ex07.html">포토샵</a>
+                            </li>
+                            <li>
+                                <a href="./ex08.html">일러스트</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        웹퍼블리싱
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>javaScript</li>
+                        </ul>
+                    </li>
+                </ul>            </div>
+            <hr>
+            <div>
+                <h2>Education</h2>
+                <table>
+                    <tr id="first_tr">
+                        <td>출신학교</td>
+                        <td>전공</td>
+                        <td>기간</td>
+                        <td>구분</td>
+                    </tr>
+                    <tr>
+                        <td>경인여자대학교</td>
+                        <td>광고디자인</td>
+                        <td>2017.03-2020.02</td>
+                        <td>졸업</td>
+                    </tr>
+                    <tr>
+                        <td>관악고등학교</td>
+                        <td>-</td>
+                        <td>2014.03-2017.02</td>
+                        <td>졸업</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <table id="second_table">
+                    <tr id="line_01">
+                        <td>출신학교</td>
+                        <td>전공</td>
+                        <td>기간</td>
+                        <td>구분</td>
+                    </tr>
+                    <tr id="line_02">
+                        <td>경인여자대학교</td>
+                        <td>광고디자인</td>
+                        <td>2017.03-2020.02</td>
+                        <td>졸업</td>
+                    </tr>
+                    <tr id="line_03">
+                        <td>관악고등학교</td>
+                        <td>-</td>
+                        <td>2014.03-2017.02</td>
+                        <td>졸업</td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+        </article>
+    </section>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE8]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous"></script>
+    <![endif]-->
+    <title>멀티미디어</title>
+    <style>
+        video{
+            width: 800px;
+            opacity: 1;
+            transition: 1s;
+            }
+        h1{
+            transition: 5s;
+            }
+        /* video{width: 300px; opacity: 0.5;} */
+    </style>
+</head>
+<body>
+
+    <h1>멀티미디어</h1>
+    <h2>ex01</h2>
+    <h2>ex02</h2>
+    <picture>
+        <!-- 해상도가 700이상이면 hotdog01.jpg, 460이상이면 hotdog02.jpg, 460 미만이면 hotdog03.jpg가 보인다. -->
+        <source srcset="./images/hotdog01.psd" type="image.psd">
+        <source srcset="./images/hotdog02.jpg" type="image.jpg">
+        <img src="./images/hotdog03.jpg" alt="핫도그">
+    </picture>
+    
+    <br>
+
+    <!-- <video src="./media/puppy.mp4" autoplay controls loop></video> -->
+    <!-- value의 "~"라는 이름을 가진 button, function기능에서는 onclick의 "~"라는 이름을 부른다. -->
+    <input type="button" value="play" onclick="play();">
+    <input type="button" value="stop" onclick="stop();">
+    <input type="button" value="transform" onclick="videoTrans();">
+    <input type="button" value="test" onclick="test01();">
+    
+    <br>
+
+    <video autoplay>
+        <source src="./media/puppy.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        // document.querySelector 까지만 입력하면 여러개의 입력값을 가지고 있어도 앞의 1개만 선택.
+        // ex) h2의 태그가 2개 있어도 앞의 ex01만 선택되어 기능.
+        //     h2의 태그 2개가 모두 움직이려면 주석 참고.
+
+        function play(){
+            document.querySelector('video').play();
+        }
+
+        function stop(){
+            document.querySelector('video').pause();
+        }
+
+        function videoTrans(){
+            document.querySelector('video').style.width='300px';
+            document.querySelector('video').style.opacity='0.5';
+            document.querySelector('h1').style.marginLeft='-200px';
+        }
+        function test01(){
+            document.querySelector('h2').style.marginLeft='200px';
+        }
+        // var tmp=document.querySelectorAll('h2');
+        // console.log(tmp);
+        // function test01(){
+        //     for(var cnt=0;cnt<2;cnt++){
+        //         tmp[cnt].style.marginLeft='200px';
+        //         console.log(tmp[1]);
+        //     }
+        //     // document.querySelectorAll('h2').style.marginLeft='200px';
+        // }
+
+    </script>
+    
+</body>
+</html>
