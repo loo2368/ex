@@ -6,20 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>연습11</title>
     <style>
-        section{
-            font-size: 100px;
+        input{
+            display: none;
+            }
+        h2{
+            transition: 0.5s;
+            transform-origin: left bottom;
         }
-        .wrap{
-            font-size: 50px;
-        }
-        #wrap{
+        input:checked + h2{
+            transform: rotate(90deg);
+            font-size: 34px;
+            opacity: 50%;
+            }
+            /* 우선 순위 : ID > class > Tag, 동일한 우선 순위 단위 : style의 가장 하단 단위 적용 */
+            /* ex) .wrap과 .element02의 우선 순위 단위는 같으나 .element02가 밑에 있으므로 .element02가 적용됨. */
+        /* .wrap {
             font-size: 10px;
+        }
+        .element02{
+            font-size: 30px;
+        } */
+
+        /* #btn에 마우스를 올리면 #item01의 색상 변경 */
+        /* + : + 다음 선택자에 효과 적용 */
+        #btn:hover + #item01{
+            color: red;
+        }
+        #btn:hover + #item01 + #item02{
+            color: magenta;
         }
     </style>
 </head>
 <body>
-    <section class="wrap" id="wrap">
-        엘리먼트
-    </section>
+    
+    <input type="checkbox">
+    타이틀
+    <br>
+    <label>
+        <input type="checkbox">
+        <h2>타이틀</h2>
+    </label>
+
+    <div id="btn">마우스를 올리세요</div>
+    <div id="item01">아이템01</div>
+    <div id="item02">아이템02</div>
+    <div id="item03">아이템03</div>
 </body>
 </html>
